@@ -75,9 +75,6 @@ Message sending method: SendMessage
 
 Notification receiving method: ReceiveNotification
 
-License
-This project is distributed under the MIT License. For details, see the LICENSE file.
-
 Author
 [Igor]
 [aleshechrin12@yandex.ru]
