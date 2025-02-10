@@ -1,57 +1,83 @@
-Getting Started with Create React App
-This project was bootstrapped with Create React App.
+This project is a simple chat application for sending and receiving text messages via WhatsApp using the Green-API service. The project is built with React and can be run locally using Yarn.
 
-Available Scripts
-In the project directory, you can run:
+Requirements
+A Green-API account. Sign up at Green-API and obtain your idInstance and apiTokenInstance.
 
+Node.js installed (version 16 or higher).
+
+Yarn installed.
+
+Installation and Running the Project
+1. Cloning the Repository
+Clone the repository to your computer:
+
+bash
+Copy
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+2. Installing Dependencies
+Install all required dependencies using Yarn:
+
+bash
+Copy
+yarn install
+3. Running the Project
+Start the project in development mode:
+
+bash
+Copy
 yarn start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+After this, the application will be available at: http://localhost:3000.
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+How to Use
+Logging In:
 
-yarn test
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+On the main page, enter your idInstance and apiTokenInstance obtained from Green-API.
 
-yarn build
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Creating a Chat:
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+Enter the recipient's phone number in the format 79991112233 (without +).
 
-See the section about deployment for more information.
+Sending Messages:
 
-yarn eject
-Note: this is a one-way operation. Once you eject, you can't go back!
+Enter the message text in the input field and click the "Send" button.
 
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+Receiving Messages:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Click the "Check Messages" button to retrieve new messages from the recipient.
 
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Project Structure
+src/: The main directory containing the source code.
 
-Learn More
-You can learn more in the Create React App documentation.
+App.js: The main application component.
 
-To learn React, check out the React documentation.
+Chat.jsx: The chat component.
 
-Code Splitting
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Message.jsx: The component for displaying a message.
 
-Analyzing the Bundle Size
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Input.jsx: The component for inputting and sending messages.
 
-Making a Progressive Web App
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Login.jsx: The component for entering Green-API credentials.
 
-Advanced Configuration
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+App.css: Styles for the application.
 
-Deployment
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Technologies Used
+React: A library for building user interfaces.
 
-yarn build fails to minify
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Axios: For making HTTP requests to Green-API.
+
+Yarn: A package manager for managing dependencies.
+
+Green-API Documentation
+Green-API Documentation
+
+Message sending method: SendMessage
+
+Notification receiving method: ReceiveNotification
+
+License
+This project is distributed under the MIT License. For details, see the LICENSE file.
+
+Author
+[Igor]
+[aleshechrin12@yandex.ru]
