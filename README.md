@@ -46,20 +46,20 @@ Receiving Messages:
 
 Click the "Check Messages" button to retrieve new messages from the recipient.
 
-Project Structure
-src/: The main directory containing the source code.
+Project Structure:
 
-App.js: The main application component.
+ChatApp.jsx: The main application component.
 
 Chat.jsx: The chat component.
-
-Message.jsx: The component for displaying a message.
 
 Input.jsx: The component for inputting and sending messages.
 
 Login.jsx: The component for entering Green-API credentials.
 
+Message.jsx: The component for displaying a message.
+
 App.css: Styles for the application.
+
 
 Technologies Used
 React: A library for building user interfaces.
