@@ -13,8 +13,8 @@ Clone the repository to your computer:
 
 bash
 Copy
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/MalrboroI/GREEN-API-test-.git
+cd repository
 2. Installing Dependencies
 Install all required dependencies using Yarn:
 
