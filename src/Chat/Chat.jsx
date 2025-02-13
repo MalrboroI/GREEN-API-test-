@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import Message from "../Message/Message";
 import Input from "../Input/Input";
@@ -25,8 +25,8 @@ export default function Chat({ idInstance, apiTokenInstance }) {
     }
   };
 
-  // Функция для получения сообщений receiveNotification
-  const receiveMessages = async () => {
+  // Функция для получения сообщений receiveNotification. Обязательная мемоизация ф-и receiveMessages
+  const receiveMessages = useCallback(async () => {
     const url = `https://1103.api.green-api.com/waInstance${idInstance}/receiveNotification/${apiTokenInstance}`;
 
     try {
@@ -36,35 +36,40 @@ export default function Chat({ idInstance, apiTokenInstance }) {
           receiveTimeout: 5,
         },
       });
+
       if (response.data) {
         const notification = response.data;
 
-        if (notification.body.typeWebhook === "incomingMessageReceived") {
+        if (notification.body.typeWebhook === "outgoingAPIMessageReceived") {
           const webhookData = notification.body.messageData;
 
-          if (webhookData.typeMessage === "textMessage") {
-            const newMessage = {
-              text: webhookData.textMessageData.textMessage,
-              isMyMessage: false,
-            };
-            setMessages([...messages, newMessage]);
-          }
+          const newMessage = {
+            senderName: notification.body.senderData.senderName,
+            text:
+              webhookData.extendedTextMessageData.text ||
+              "Неподдерживаемый тип сообщения",
+            id: notification.body.idMessage,
+            isMyMessage: false,
+          };
 
-          const receiptId = notification.receiptId;
-          await axios.delete(
-            `https://1103.api.green-api.com/waInstance${idInstance}/deleteNotification/${apiTokenInstance}/${receiptId}`
-          );
+          setMessages((prevMessages) => [...prevMessages, newMessage]);
         }
+
+        const receiptId = notification.receiptId;
+        await axios.delete(
+          `https://1103.api.green-api.com/waInstance${idInstance}/deleteNotification/${apiTokenInstance}/${receiptId}`
+        );
       }
     } catch (error) {
       console.error("Ошибка при получении сообщения:", error);
     }
-  };
+  }, [idInstance, apiTokenInstance, phoneNumber]);
 
+  
   useEffect(() => {
-    const interval = setInterval(receiveMessages, 6000);
-    return () => clearInterval(interval);
-  }, []);
+    const intervalId = setInterval(receiveMessages, 6000);
+    return () => clearInterval(intervalId);
+  }, [receiveMessages]);
 
   return (
     <div className="chat">
@@ -77,11 +82,12 @@ export default function Chat({ idInstance, apiTokenInstance }) {
         />
       </div>
       <div className="messages">
-        {messages.map((message, index) => (
+        {messages.map((message) => (
           <Message
-            key={index}
+            key={message.id}
             text={message.text}
             isMyMessage={message.isMyMessage}
+            senderName={message.senderName}
           />
         ))}
       </div>

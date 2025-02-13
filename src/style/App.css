@@ -93,12 +93,15 @@
 
 .my-message {
   background-color: #dcf8c6;
-  align-self: flex-start;
+  margin-left: auto;
+  text-align: right;
+  width: max-content;
 }
 
 .other-message {
   background-color: #fff;
-  align-self: flex-end;
+  margin-right: auto;
+  width: max-content;
 }
 
 /* Input */

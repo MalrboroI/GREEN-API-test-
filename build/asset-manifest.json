@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/GREEN-API-test.git/static/css/main.b550b9b1.css",
-    "main.js": "/GREEN-API-test.git/static/js/main.1dc88407.js",
+    "main.css": "/GREEN-API-test.git/static/css/main.f7421407.css",
+    "main.js": "/GREEN-API-test.git/static/js/main.936a993a.js",
     "index.html": "/GREEN-API-test.git/index.html",
-    "main.b550b9b1.css.map": "/GREEN-API-test.git/static/css/main.b550b9b1.css.map",
-    "main.1dc88407.js.map": "/GREEN-API-test.git/static/js/main.1dc88407.js.map"
+    "main.f7421407.css.map": "/GREEN-API-test.git/static/css/main.f7421407.css.map",
+    "main.936a993a.js.map": "/GREEN-API-test.git/static/js/main.936a993a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b550b9b1.css",
-    "static/js/main.1dc88407.js"
+    "static/css/main.f7421407.css",
+    "static/js/main.936a993a.js"
   ]
 }
