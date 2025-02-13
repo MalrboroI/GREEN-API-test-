@@ -1,36 +1,21 @@
 This project is a simple chat application for sending and receiving text messages via WhatsApp using the Green-API service. The project is built with React and can be run locally using Yarn.
 
-Requirements
-A Green-API account. Sign up at Green-API and obtain your idInstance and apiTokenInstance.
+Requirements A Green-API account. Sign up at Green-API and obtain your idInstance and apiTokenInstance.
 
 Node.js installed (version 16 or higher).
 
 Yarn installed.
 
 Installation and Running the Project
-1. Cloning the Repository
-Clone the repository to your computer:
 
-bash
-Copy
-git clone https://github.com/MalrboroI/GREEN-API-test-.git
-cd Green-API
-2. Installing Dependencies
-Install all required dependencies using Yarn:
+Cloning the Repository Clone the repository to your computer:
+bash Copy git clone https://github.com/MalrboroI/GREEN-API-test-.git cd Green-API 2. Installing Dependencies Install all required dependencies using Yarn:
 
-bash
-Copy
-yarn install
-3. Running the Project
-Start the project in development mode:
+bash Copy yarn install 3. Running the Project Start the project in development mode:
 
-bash
-Copy
-yarn start
-After this, the application will be available at: http://localhost:3000.
+bash Copy yarn start After this, the application will be available at: http://localhost:3000.
 
-How to Use
-Logging In:
+How to Use Logging In:
 
 On the main page, enter your idInstance and apiTokenInstance obtained from Green-API.
 
@@ -60,21 +45,16 @@ Message.jsx: The component for displaying a message.
 
 App.css: Styles for the application.
 
-
-Technologies Used
-React: A library for building user interfaces.
+Technologies Used React: A library for building user interfaces.
 
 Axios: For making HTTP requests to Green-API.
 
 Yarn: A package manager for managing dependencies.
 
-Green-API Documentation
-Green-API Documentation
+Green-API Documentation Green-API Documentation
 
 Message sending method: SendMessage
 
 Notification receiving method: ReceiveNotification
 
-Author
-[Igor]
-[aleshechrin12@yandex.ru]
+Author [Igor] [aleshechrin12@yandex.ru]
