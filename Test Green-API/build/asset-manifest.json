@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GREEN-API-test.github.io/static/css/main.b550b9b1.css",
+    "main.js": "/GREEN-API-test.github.io/static/js/main.1dc88407.js",
+    "index.html": "/GREEN-API-test.github.io/index.html",
+    "main.b550b9b1.css.map": "/GREEN-API-test.github.io/static/css/main.b550b9b1.css.map",
+    "main.1dc88407.js.map": "/GREEN-API-test.github.io/static/js/main.1dc88407.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b550b9b1.css",
+    "static/js/main.1dc88407.js"
+  ]
+}
